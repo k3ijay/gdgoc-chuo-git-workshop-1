@@ -1,2 +1,13 @@
-# gdgoc-chuo-git-workshop-1
-Git / GitHub workshop for GDGoC Chuo. Learn basic workflows by editing Markdown files.
+# GDGoC Chuo Git / GitHub Workshopへようこそ！
+
+このリポジトリは、初心者向けにGitやGitHubの基礎を、ハンズオンを通して学べるように作られています。2026年9月26日の勉強会から使用します。
+
+## このワークショップでやること
+
+Markdown（マークダウン）ファイルの編集を通して、以下の内容を実践しながら学びます。
+
+* **基本的なGitのワークフローの習得**（Clone、Commit、Push）
+* **Markdownファイルの編集による実践的なスキルの習得**
+* リポジトリの設定方法や扱い方
+
+一緒にバージョン管理の基本をマスターしましょう！
