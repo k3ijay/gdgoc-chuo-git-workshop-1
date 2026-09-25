@@ -29,7 +29,7 @@
 本リポジトリを手元にClone（またはForkしてからClone）し、作業用の新しいブランチを作成して切り替えます。
 
 ```bash
-git switch -c feature/add-<your-name>
+git switch -c add-<your-name>
 ```
 
 ### 2. プロフィール（JSON）の作成
@@ -76,7 +76,7 @@ npm run validate
 ```bash
 git add .
 git commit -m "feat: [ユーザー名]のプロフィールを追加"
-git push origin feature/add-<your-name>
+git push origin add-<your-name>
 ```
 
 PRを作成すると、問題がなければ自動的にマージされてWebページに反映されます。
@@ -86,7 +86,7 @@ PRを作成すると、問題がなければ自動的にマージされてWebペ
 ## よくあるトラブル・注意点
 
 * **`main` ブランチでは絶対に作業しないこと**
-  * `main` ブランチに直接コミットせず、必ず作業用ブランチ（`feature/...`）を切ってからPRを出してください。
+  * `main` ブランチに直接コミットせず、必ず作業用ブランチを切ってからPRを出してください。
 * **JSONの構文エラーに注意すること**
   * カンマ（`,`）の付け忘れや、末尾の余分なカンマ、閉じカッコの漏れがないか、頻繁に確認しましょう。
 * **他のファイル・共通ファイルを変更・削除しないこと**
