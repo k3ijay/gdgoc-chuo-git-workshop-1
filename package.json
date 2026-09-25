@@ -1,0 +1,25 @@
+{
+  "name": "gdgoc-chuo-git-workshop-1",
+  "version": "1.0.0",
+  "description": "このリポジトリは、初心者向けにGitやGitHubの基礎を、ハンズオンを通して学べるように作られています。2026年9月26日の勉強会から使用します。",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3ijay/gdgoc-chuo-git-workshop-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/k3ijay/gdgoc-chuo-git-workshop-1/issues"
+  },
+  "homepage": "https://github.com/k3ijay/gdgoc-chuo-git-workshop-1#readme",
+  "dependencies": {
+    "image-size": "^2.0.4"
+  }
+}

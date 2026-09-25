@@ -5,3 +5,5 @@ Desktop.ini
 ._*
 Icon?
 *.tmp
+node_modules/
+dist/

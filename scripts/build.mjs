@@ -13,11 +13,11 @@ fs.mkdirSync(DIST_DIR, { recursive: true });
 // copy public directory contents to dist directory
 fs.cpSync(PUBLIC_DIR, DIST_DIR, { recursive: true });
 
-const files = fs.readdirSync(CONTENTS_DIR).filter(f => f.endsWith('.json'));
+const files = fs.readdirSync(CONTENTS_DIR).filter(f => f.endsWith('.json') && fs.statSync(path.join(CONTENTS_DIR, f)).isFile());
 const members = files.map(file => {
   const raw = fs.readFileSync(path.join(CONTENTS_DIR, file), 'utf-8');
   const data = JSON.parse(raw);
-  const rawAvatar = data.avatar || '/images/default-avatar.svg';
+  const rawAvatar = data.avatar || '/images/default-avatar.png';
   return {
     id: path.basename(file, '.json'),
     name: data.name,
@@ -41,7 +41,7 @@ const distJsPath = path.join(DIST_DIR, 'js/main.js');
 const js = fs.readFileSync(distJsPath, 'utf-8');
 const updatedJs = js.replace(
   /\/\* __MEMBERS_DATA_PLACEHOLDER__ \*\/\s*\[\]/,
-  JSON.stringify(members, null, 2)
+  () => JSON.stringify(members, null, 2)
 );
 fs.writeFileSync(distJsPath, updatedJs, 'utf-8');
 
