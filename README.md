@@ -4,7 +4,7 @@
 
 ## この勉強会でやること
 
-自分のコメントなどが書かれたのJSONファイルやアイコンファイル（画像）を追加・編集し、プルリクエストを作成することで、以下の内容を実践しながら学びます。
+自分のコメントなどが書かれたのJSONファイルや、アイコンファイル（画像）を追加・編集し、プルリクエストを作成することで、以下の内容を実践しながら学びます。
 
 * **基本的なGitのワークフローの習得**（Clone、ブランチ作成、Commit、Push）
 * **GitHubを使った共同開発の流れの体験**（Pull Requestの作成、自動検証CI、マージフロー）
@@ -29,7 +29,7 @@
 本リポジトリを手元にClone（またはForkしてからClone）し、作業用の新しいブランチを作成して切り替えます。
 
 ```bash
-git checkout -b feature/<your-name>
+git switch -c feature/add-<your-name>
 ```
 
 ### 2. プロフィール（JSON）の作成
@@ -75,11 +75,11 @@ npm run validate
 
 ```bash
 git add .
-git commit -m "Add profile for <your-name>"
-git push origin feature/<your-name>
+git commit -m "feat: [ユーザー名]のプロフィールを追加"
+git push origin feature/add-<your-name>
 ```
 
-PRを作成すると自動的にが走り、問題がなければマージされてWebページに反映されます。
+PRを作成すると、問題がなければ自動的にマージされてWebページに反映されます。
 
 ---
 
